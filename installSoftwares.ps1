@@ -28,7 +28,8 @@ $programs =
 #"visualstudio2015community",
 "sourcetree",
 "f.lux",
-#"sublimetext3"
+#"sublimetext3",
+"autoit"
 
 
 $programs | ForEach-Object{choco install $_ -y}
