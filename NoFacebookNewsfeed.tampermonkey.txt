@@ -1,0 +1,11 @@
+ ==UserScript==
+ @name         No facebook newsfeed
+ @namespace    httptampermonkey.net
+ @version      0.1
+ @description  Fb, give me a rest!
+ @author       You
+ @match www.facebook.com
+ @require  httpajax.googleapis.comajaxlibsjquery1.7.2jquery.min.js
+ @require  httpsgist.github.comraw2625891waitForKeyElements.js
+ @grant        none
+ ==UserScript==
