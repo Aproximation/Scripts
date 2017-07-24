@@ -50,7 +50,8 @@ Script check user execution policy and install chocolatey if needed.
 
 More info about chocolatey: 
 <a href="https://chocolatey.org">https://chocolatey.org</a>
-
+<h2>Example usage</h2>
+./installSoftwares.ps1
 <h1>NoFacebookNewsfeed.tampermonkey.txt</h1>
 Script to be used in TamperMonkey browser addon. It hides wall, notifications button (but leaves friends requests and messages), ads, friends availability (but leaves friends search).
 In the name of Productivity!
