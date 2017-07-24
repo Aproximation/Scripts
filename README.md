@@ -1,10 +1,10 @@
 # Scripts
 Usefull scripts
 <ul>
-<li> GetAllTerms.ps1 </li>
-<li> getWifiProfiles.ps1 </li>
-<li> installSoftwares.ps1 </li>
-<li> NoFacebookNewsfeed </li>
+<li> <a href="https://github.com/Aproximation/Scripts/tree/master#getalltermsps1">GetAllTerms.ps1</a> </li>
+<li>  <a href="https://github.com/Aproximation/Scripts#getwifiprofilesps1"> GetWifiProfiles.ps1 </a></li>
+<li>  <a href="https://github.com/Aproximation/Scripts#installsoftwaresps1"> InstallSoftwares.ps1 </a> </li>
+<li>  <a href="https://github.com/Aproximation/Scripts#nofacebooknewsfeedtampermonkeytxt"> NoFacebookNewsfeed </a></li>
 </ul>
 
 <h1>GetAllTerms.ps1</h1>
@@ -39,11 +39,11 @@ https://contoso.sharepoint.com <br>
 TestUser <br>
 "Contoso Taxonomy" </li></ul>
 
-<h1>getWifiProfiles.ps1</h1>
+<h1>GetWifiProfiles.ps1</h1>
 Get all saved wifi profiles that are stored in your system. Name and password.
 <h2>Example usage</h2>
 ./getWifiProfiles.ps1
-<h1>installSoftwares.ps1</h1>
+<h1>InstallSoftwares.ps1</h1>
 Script for installing software in a batch (main target: new windows OS).
 For installing it uses chocolatey packages repository.
 Script check user execution policy and install chocolatey if needed.
