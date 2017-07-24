@@ -12,8 +12,6 @@
     [String]
         $TermSetName
 )
-#Example: .\GetAllTerms.ps1 -SharepointOnlineURL https://findwise.sharepoint.com -UserNameInWCM mguzowski -TermGroupName "Findwise Taxonomy" -TermSetName "Actor"
-#Example: .\GetAllTerms.ps1 https://findwise.sharepoint.com mguzowski "Findwise Taxonomy"
 
 if (-NOT (Get-Module -ListAvailable -Name SharePointPnPPowerShellOnline)) {
     Write-Host "Module not found. Installing..."
@@ -38,10 +36,7 @@ function GetChildrenTerms ($ctx, $termSetName, $term){
     $ctx.Load($term.Terms)
     $ctx.ExecuteQuery()
     $global:result += "{0};{1};{2}" -f $TermGroupName, $termSetName, (GetPath -term $_)
-    if ($term.Terms.Count -ne 0){
-        #this is leaf
-        #$termsCollection += $TermGroupName+";"+$TermSetName+";"+ (GetPath -term $_)
-        
+    if ($term.Terms.Count -ne 0){        
         $term.Terms | ForEach-Object{(GetChildrenTerms -ctx $ctx -termSetName $termSetName -term $_)}
     }
 }
