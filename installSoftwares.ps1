@@ -17,18 +17,28 @@ if (Get-Command chocolatey -errorAction SilentlyContinue)
 $programs = 
 "7zip",
 "skype",
-"notepadplusplus",
+"notepadplusplus --x86",
 "dotnet4.5",
 "paint.net",
 "keepass",
 #"spotify",
+"toastify",
 "googlechrome",
 "slack",
+"onenote",
+"microsoft-teams",
+"office365proplus",
+"todoist",
+#"todoist-outlook",
+"git",
+"conemu",
 "dotpeek", #jetbrains decompiler
 #"visualstudio2015community",
+"visualstudio2017-installer",
+"visualstudiocode",
 "sourcetree",
 "f.lux",
-#"sublimetext3",
+"openvpn",
 "autoit"
 
 
