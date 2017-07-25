@@ -39,7 +39,8 @@ $programs =
 "sourcetree",
 "f.lux",
 "openvpn",
-"autoit"
+"autoit",
+"filezilla"
 
 
 $programs | ForEach-Object{choco install $_ -y}
