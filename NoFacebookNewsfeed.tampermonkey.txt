@@ -4,17 +4,18 @@
 // @version      1.0
 // @description  Fb, give me a rest!
 // @author       You
-// @match *://www.facebook.com/*
+// @match *.facebook.com/*
 // @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
 // @require  https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @grant        GM_addStyle
 // @run-at document-start
 // ==/UserScript==
 
+var unhideQueryKeyValue = "khuij1neasfdwe;r234r2";
 GM_addStyle('#fbNotificationsJewel { display:none !important; }');
 GM_addStyle('._64a { display:none !important; }');
 GM_addStyle('#appsNav ul._bui._3-96._5pyq li:gt(0) { display:none !important; }');
-GM_addStyle('#rightCol { display:none !important; }');
+//GM_addStyle('#rightCol { display:none !important; }');
 GM_addStyle('div[aria-label="Chat with friends"] { display:none !important; }');
 
 // Not use below - otherwise facebook will run in infinite loop scripts that slows down fb 
@@ -39,7 +40,8 @@ function hideChatBlock (id) {
 
 function enforceShowAll()
 {
-    if (document.location.search.contains("show=more")){
+    var date = new Date();
+    if (document.location.search.contains(unhideQueryKeyValue) || date.getDay() === 0){
          return true;
     }
     else
@@ -48,7 +50,7 @@ function enforceShowAll()
 
 function showNotifIcon(id)
 {    
-    if (document.location.search.contains("show=more")){
+    if (enforceShowAll()){
         var notifButton = document.getElementsByClassName("jewelButton")[2];
         notifButton.parentElement.style = "display:block !important;";
     }
