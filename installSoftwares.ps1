@@ -40,7 +40,9 @@ $programs =
 "f.lux",
 "openvpn",
 "autoit",
-"filezilla"
+"filezilla",
+"fiddler",
+"wireshark"
 
 
 $programs | ForEach-Object{choco install $_ -y}
