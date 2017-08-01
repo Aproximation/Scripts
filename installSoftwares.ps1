@@ -17,7 +17,7 @@ if (Get-Command chocolatey -errorAction SilentlyContinue)
 $programs = 
 "7zip",
 "skype",
-"notepadplusplus --x86",
+"notepadplusplus -x86", #x86 version allow for installing plugins which really improve notepad++
 "dotnet4.5",
 "paint.net",
 "keepass",
@@ -28,20 +28,20 @@ $programs =
 "onenote",
 "microsoft-teams",
 "office365proplus",
-"todoist",
+#"todoist",
 #"todoist-outlook",
 "git",
 "conemu",
 "dotpeek", #jetbrains decompiler
 #"visualstudio2015community",
-"visualstudio2017-installer",
+#"visualstudio2017-installer", #just installer
 "visualstudiocode",
 "sourcetree",
 "f.lux",
 "openvpn",
 "autoit",
 "filezilla",
-"fiddler",
+"fiddler4",
 "wireshark"
 
 
