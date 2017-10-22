@@ -42,9 +42,8 @@ function GetChildrenTerms ($ctx, $termSetName, $term){
 }
 
 function GetTermSetTerms($termSetName){
-    
     $global:result += "{0};{1}" -f $TermGroupName, $termSetName
-Get-PnPTerm -TermSet $termSetName -TermGroup $TermGroupName | ForEach-Object{(GetChildrenTerms -ctx $ctx -termSetName $termSetName -term $_)}
+    Get-PnPTerm -TermSet $termSetName -TermGroup $TermGroupName | ForEach-Object{(GetChildrenTerms -ctx $ctx -termSetName $termSetName -term $_)}
 }
 
 Connect-PnPOnline -Url $SharepointOnlineURL -Credentials $UserNameInWCM
@@ -52,8 +51,7 @@ $group = Get-PnPTermGroup -Identity $TermGroupName
 $ctx = $group.Context
 
 if ($TermSetName){
-    $global:result += "{0};{1}" -f $TermGroupName, $TermSetName
-    Get-PnPTerm -TermSet $TermSetName -TermGroup $TermGroupName | ForEach-Object{(GetChildrenTerms -ctx $ctx -termSetName $TermSetName -term $_)}
+    GetTermSetTerms($TermSetName)    
 } else {
 
     $ctx.Load($group.TermSets)
