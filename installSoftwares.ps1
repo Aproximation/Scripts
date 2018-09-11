@@ -21,14 +21,14 @@ $programs =
 "dotnet4.5",
 "paint.net",
 "keepass",
-#"spotify",
-"toastify",
+"spotify",
+#"toastify",
 "googlechrome",
 "slack",
 "onenote",
 "microsoft-teams",
 "office365proplus",
-#"todoist",
+"todoist",
 #"todoist-outlook",
 "git",
 "conemu",
@@ -40,10 +40,10 @@ $programs =
 "f.lux",
 "openvpn",
 "autoit",
-"filezilla",
+#"filezilla",
 "fiddler4",
-"wireshark"
-
+"wireshark",
+"powerbi"
 
 $programs | ForEach-Object{choco install $_ -y}
 
