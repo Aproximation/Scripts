@@ -17,6 +17,7 @@ GM_addStyle('._64a { display:none !important; }');
 GM_addStyle('#appsNav ul._bui._3-96._5pyq li:gt(0) { display:none !important; }');
 //GM_addStyle('#rightCol { display:none !important; }');
 GM_addStyle('div[aria-label="Chat with friends"] { display:none !important; }');
+GM_addStyle('#stories_pagelet_below_composer { display:none !important; }');
 
 // Not use below - otherwise facebook will run in infinite loop scripts that slows down fb 
 // Precisely fb tries to run scripts on newsfeed elements based on their existence constrained with its visibility
