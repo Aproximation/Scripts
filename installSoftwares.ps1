@@ -16,34 +16,40 @@ if (Get-Command chocolatey -errorAction SilentlyContinue)
 
 $programs = 
 "7zip",
-"skype",
 "notepadplusplus -x86", #x86 version allow for installing plugins which really improve notepad++
-"dotnet4.5",
 "paint.net",
-"keepass",
+"bitwarden",
 "spotify",
-#"toastify",
 "googlechrome",
 "slack",
 "onenote",
 "microsoft-teams",
-"office365proplus",
-"todoist",
+"dotnet4.5.2",
+"vscode --params /NoDesktopIcon","fiddler",
+"powerbi",
+"adobereader",
+"camtasia",
+"obs-studio",
+"obs-virtualcam",
+"obs-ndi"
+#"skype",
+#"keepass",
+#"toastify",
+#"office365proplus",
+#"todoist",
 #"todoist-outlook",
-"git",
-"conemu",
-"dotpeek", #jetbrains decompiler
+#"git",
+#3"conemu",
+#"dotpeek", #jetbrains decompiler
 #"visualstudio2015community",
 #"visualstudio2017-installer", #just installer
-"visualstudiocode",
-"sourcetree",
-"f.lux",
-"openvpn",
-"autoit",
+#"sourcetree",
+#"f.lux",
+#"openvpn",
+#"autoit",
 #"filezilla",
-"fiddler4",
-"wireshark",
-"powerbi"
+#"wireshark",
+
 
 $programs | ForEach-Object{choco install $_ -y}
 
