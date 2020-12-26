@@ -31,7 +31,8 @@ $programs =
 "camtasia",
 "obs-studio",
 "obs-virtualcam",
-"obs-ndi"
+"obs-ndi",
+"steam"
 #"skype",
 #"keepass",
 #"toastify",
