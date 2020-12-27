@@ -9,10 +9,13 @@ https://chocolatey.org
 
 $currenPolicy = Get-ExecutionPolicy
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-if (Get-Command chocolatey -errorAction SilentlyContinue)
-{
-    iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex	#install Chocolatey
-}
+
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex	#install Chocolatey
+
+#if (Get-Command chocolatey -errorAction SilentlyContinue)
+#{
+#    iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex	#install Chocolatey
+#}
 
 $programs = 
 "7zip",
